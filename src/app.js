@@ -1,11 +1,20 @@
-console.log('hola hola');
+console.log('hola hola fhjfhf');
 const { request, response } = require('express');//por convencion le ponemos el mismop nombre
 const express = require('express');
 
 const app= express();
+
+const datos= require ("../data/data.json");
+console.log(datos);
+
 app.get('/api',(req,res)=>{console.log('paso por api');
-res.json({mensaje:'hola mundo', estado:'OKi'}).status(200)});
+res.json(datos.personas).status(200)});
 app.listen(3001,() =>{console.log('escuchando en el puerto 3000')});
+
+
+
+
+
 
 /*Windows PowerShell
 Copyright (C) Microsoft Corporation. Todos los derechos reservados.
